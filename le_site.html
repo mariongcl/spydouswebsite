@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Gicquel - Site</title>
+    <link rel="icon" type="image/svg+xml" href="papillon-rose.svg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <header>
+    <p class="myname"><strong>Marion Gicquel  </strong> &nbsp; curriculum vitae</p>
+  </header>
+
+  <!-- Tout le contenu de la page ici dans #main-content -->
+  <div id="main-content">
+    <div id="topnav" class="topnav">
+        <a id="home_link" class="topnav_link" href="index.html">HOME</a>
+        <a id="topnav_hamburger_icon" onclick="showResponsiveMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <!-- Menu classique -->
+        <nav role="navigation" id="topnav_menu">
+            <a class="topnav_link" href="page2.html">PRÉSENTATION</a>
+            <a class="topnav_link" href="formation.html">FORMATION</a>
+            <a class="topnav_link" href="experience.html">EXPÉRIENCE</a>
+            <a class="topnav_link" href="loisirs.html">LOISIRS</a>
+            <a class="topnav_link" href="choix.html">CHOIX</a>
+            <a class="topnav_link" href="le_site.html">LE SITE</a>
+            <a class="topnav_link" href="contact.html">CONTACT</a>
+        </nav>
+        <!-- Responsive Menu -->
+        <nav role="navigation" id="topnav_responsive_menu">
+            <ul>
+                <li><a href="page2.html">PRÉSENTATION</a></li>
+                <li><a href="formation.html">FORMATION</a></li>
+                <li><a href="experience.html">EXPÉRIENCE</a></li>
+                <li><a href="loisirs.html">LOISIRS</a></li>
+                <li><a href="choix.html">CHOIX</a></li>
+                <li><a href="le_site.html">LE SITE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contenu principal -->
+    <h2>le site</h2>
+    <div id="conteneur">
+        <div class="zone2">
+            <div class="le_site_mon_projet">
+              <div class="le_site_mon_projet_titre">Pourquoi ce site ? </div>
+              Je voulais créer un projet qui me permette de montrer ce que je sais faire pour pouvoir mieux me présenter lors de ma recherche d'alternance, tout en faisant quelque chose que j'aime. J'ai donc décidé de créer un site à mon image.
+              <br><br>
+              <div class="le_site_mon_projet_titre">La construction du site</div>
+              Pour que mon site soit visible en ligne, il me fallait l'héberger. J'ai regardé les différentes possibilités. La majorité d'entre elles était payante. J'ai donc hébergé mon site sur GitHub, ce qui me permet de l'héberger gratuitement, avec en bonus on peut retrouver les feuilles HTML, CSS, JS pour les regarder. La seule contrainte était que GitHub ne supporte ni PHP, ni ne peut gérer une base de données. J'ai donc construit ce site sans ces éléments. J'ai cependant déjà eu l'occasion de manipuler ces éléments pendant mes cours à l'école et pendant des SAE. 
+              <br>Ce site m'a permis de beaucoup apprendre et de m'améliorer. J'ai débuté en me demandant quels éléments je voulais dans mon site. 
+              <br>J'ai commencé par la forme du site, en faisant d'abord le header puis le footer, puis j'ai utilisé des flexbox pour le body de ma page.
+              <br> Une fois que j'ai fini, j'ai pu m'attaquer au contenu de mon body en utilisant mes boxs pour disposer mon contenu. 
+              <br>Cela m'a permis de m'améliorer en HTML, CSS et JavaScript.
+
+              <br><br>
+              <div class="le_site_mon_projet_titre">Difficultés</div>
+              Lors de la création de ce site, j'ai rencontrer différentes difficultés.
+              <br> Lors de la création du menu par exemple, mettre les animations et faire en sorte qu’il soit responsive pour les petits écrans, tels que les téléphones. Étant donné que le menu est "sticky", c'est-à-dire qu'il reste en haut de la page même quand on descend, j'ai pu apprendre comment utiliser "z-index", car les éléments de mon site allaient parfois au-dessus du menu, au lieu d'être masqué par celui-ci. 
+              <br>Il y a aussi eu des difficultés en remplissant les flexbox : sur certaines pages et zones, le texte ou les éléments devaient soit être centrés, soit à gauche. Sachant que dans le CSS les zones sont configurées pour débuter à gauche, pour les cas exceptionnels, il a fallu chercher des alternatives pour déplacer sans que le CSS n'ait plus de sens et que les pages précédemment faites ne soient impactées ou désorganisées.
+              <br> J'espère avoir tout de même bien réussi mon site sans que ça ressemble à du bricolage.
+              <br><br>
+              
+              <div class="le_site_mon_projet_titre">SOURCE</div>
+              J'ai pu m'inspirer de différents sites pour construire mon site, tels que UIverse, Leaflet ou encore CodePen.
+              <br>Vous pouvez retrouver ces éléments sur cette page.
+              <br><br>
+              
+              <div class="le_site_mon_projet_titre">La place de ChatGPT dans le site ?</div>
+              Ce site a été conçu à l'aide de ChatGPT mais pas par lui, il a pu m'être utile pour reformuler des phrases, m'expliquer des problèmes dans mon code, générer des icônes SVG... Il a donc joué le rôle d’assistant : jamais il ne m’a remplacée ni construit le site à ma place (voir le résultat du prompt).
+              <br><br>
+              
+              <div class="le_site_mon_projet_titre">De nouveaux projets ?</div>
+              Je ne sais pas si je vais avoir l'occasion de faire de nouveaux projets extra-scolaires de ce type. J'ai eu la chance d'avoir du temps libre pour créer ce site, mais je pense, après, me concentrer sur mes études pour me permettre de réussir au mieux. 
+              <br>Si l’occasion se présente, je pense que je ferai une application en Python, ou j’essaierai de créer un site multilingue nourri par une base de données (pour comprendre la méthodologie des grands sites). Enfin, peut-être une application en Java. J’ai commencé à apprendre Java à l'extérieur de ma formation à l’aide du site Codedex. Je débute seulement et je n’ai pas beaucoup de temps pour apprendre, donc pour l’instant un projet de cette envergure n’est pas possible. J’espère avoir assez de temps libre pour pouvoir continuer à apprendre malgré tout.
+              
+            </div>
+          </div>
+
+      
+        <div class="zone3">
+          
+         <div class="amenagement_icone_site">
+            <a href="https://uiverse.io/"  target="_blank" rel="noopener noreferrer" ><img src="uiverseio.png" class="site_icone_aide" alt="uiverse"></a>
+            <a href="https://www.reverso.net/orthographe/correcteur-francais/"  target="_blank" rel="noopener noreferrer" ><img src="reverso.jpg" class="site_icone_aide" alt="reverso"></a>
+            <a href="https://basicons.xyz/"  target="_blank" rel="noopener noreferrer" ><img src="basicon.jpg" class="site_icone_aide" alt="basicons"></a>
+            <a href="https://codepen.io/"  target="_blank" rel="noopener noreferrer" ><img src="codepen.png" class="site_icone_aide" alt="codepen"></a>
+            <a href="https://fonts.google.com/"  target="_blank" rel="noopener noreferrer" ><img src="google_font.png" class="site_icone_aide" alt="google font"></a>
+            <a href="https://leafletjs.com/"  target="_blank" rel="noopener noreferrer" ><img src="leaflet.png" class="site_icone_aide" alt="leaflet"></a>
+            <a href="https://tw-elements.com/"  target="_blank" rel="noopener noreferrer" ><img src="tw_element.png" class="site_icone_aide" alt="tw-elements"></a>
+            <a href="https://9elements.github.io/fancy-border-radius/#30.30.55.30--."  target="_blank" rel="noopener noreferrer" ><img src="favicon.ico" class="site_icone_aide" alt="fancy border"></a>
+       </div>
+        </div>
+    </div>
+    <br>
+    <div id="conteneur">
+      <div class="zone4">
+        <div class="le_site_mon_projet_conclusion">conclusion </div>
+      <div class="le_site_conclusion">Ce site a sûrement des points d'amélioration ou des erreurs, et je vous invite à m'en faire part pour me permettre d'améliorer ce site mais aussi d'améliorer mes compétences.</div>
+        </div>
+    </div>
+
+  </div> <!-- Fin du #main-content -->
+
+  
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <p class="monmail">marion.g20@orange.fr</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<footer>
+  <ul class="logo">
+    <li class="icon-content">
+      <a class="link" data-social="Linkedin" aria-label="Linkedin" href="https://www.linkedin.com/in/marion-gicquel-b370502b5/" target="_blank" rel="noopener noreferrer">
+        <svg xml:space="preserve" viewBox="0 0 16 16" class="bi bi-github" fill="currentColor" height="16" width="16">
+          <path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path>
+        </svg>
+      </a>
+      <div class="tooltip">Linkedin</div>
+    </li>
+    <li class="icon-content">
+      <a class="link" data-social="Github" aria-label="Github" href="https://github.com/mariongcl" target="_blank" rel="noopener noreferrer">
+        <svg xml:space="preserve" viewBox="0 0 16 16" class="bi bi-github" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
+        </svg>
+      </a>
+      <div class="tooltip">Github</div>
+    </li>
+    <li class="icon-content">
+      <button class="link" onclick="openPopup()" aria-label="mail" data-social="mail">
+        <svg viewBox="0 0 512 512" height="18" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
+        </svg>
+      </button>
+      <div class="tooltip">Mail</div>
+    </li>
+  </ul>
+</footer>
+</html>
