@@ -383,7 +383,7 @@ nav a:hover {
 
   .center-frame42 {
     height: 100%; /* 60% de la hauteur de l'écran */
-     width: 100% !important;  /* 85% de la largeur de l'écran */
+     width: auto !important  /* 85% de la largeur de l'écran */
 
   }
 
@@ -1169,13 +1169,14 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 
 .center-frame42 {
-  backdrop-filter: blur(8px); /* Effet de flou sur l'arrière-plan */
+	backdrop-filter: blur(8px); /* Effet de flou sur l'arrière-plan */
   position: relative;
   background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
   border: 1px solid #7c7c7c; 
   padding: 2rem;
-  width: 60%;
   border-radius: 25px;
+  width: 60% ; /* Taille du cadre */
+  max-width: 600px; /* Limite la taille du cadre */
   color: white;
   text-align: left;
   height: auto;
