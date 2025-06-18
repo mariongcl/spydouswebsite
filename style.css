@@ -41,10 +41,9 @@ h2{
   font-size: 50px;
   color: #000000;
   text-decoration: none; 
-  margin-top: 15px; /* Remonte le texte */
+  margin-top: 15px;
 }
 
-/* Header */  
 header {
   height: 80px;
   background: #ffffff;
@@ -52,7 +51,6 @@ header {
   padding: 10px;
 }
 
-/* Navigation */
 nav a {
   color: rgb(242, 232, 232);
   text-decoration: none;
@@ -66,27 +64,27 @@ nav a:hover {
   z-index: 1;
   display: flex;  
   justify-content: space-between;
-  align-items: stretch;  /* Étire les zones pour qu'elles aient toutes la même hauteur */
+  align-items: stretch;  
   padding: 0;
   margin: 10px;
   gap: 10px;
-  height: 100%; /* Utiliser toute la hauteur disponible */
+  height: 100%; 
 }
 
 /* Zones */
 .zone1, .zone2, .zone3 {
-  flex-grow: 1;  /* Permet à chaque zone de grandir de manière égale */
+  flex-grow: 1; 
   background-color: rgb(255, 255, 255);
   padding-top: 20px;
   color: black;
   display: flex;
-  align-items: flex-start;  /* Aligner le contenu au début de la zone */
-  justify-content: flex-start;  /* Aligner le contenu au début de la zone */
+  align-items: flex-start;  
+  justify-content: flex-start; 
   border: 2px solid rgb(255, 255, 255);
-  min-height: 100px;  /* Hauteur minimale */
+  min-height: 100px;  
   box-sizing: border-box;
-  word-wrap: break-word; /* Gérer le texte long pour qu'il se brise */
-  overflow-wrap: break-word; /* Gérer les mots longs */
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
   text-align: left; 
 }
 
@@ -95,11 +93,11 @@ nav a:hover {
 .zone4 {
   flex-grow: 1;  
   color: rgb(0, 0, 0);
-  display: flex; /* Aligner le contenu au début de la zone */
+  display: flex; 
   border: 2px solid rgb(255, 255, 255);
   
   white-space: pre-line;
-  flex-direction: column; /* Ajoute cette ligne */
+  flex-direction: column; 
 }
 
 .image_dessus_zone1{
@@ -122,18 +120,17 @@ nav a:hover {
 .topnav_link {
   color: white;
   padding: 12px;
-  text-decoration: none; /* ← Ne jamais souligner le texte */
+  text-decoration: none; 
   position: relative;
   display: inline-block;
 }
 
 .topnav_link:hover {
-  letter-spacing: 0.15em; /* Optionnel pour effet "zoom" */
+  letter-spacing: 0.15em; 
   text-decoration: none;
   cursor: url("selecteur.cur") 16 16, auto;
 }
 
-/* Animation de soulignement sous le texte */
 .topnav_link::after {
   content: "";
   display: block;
@@ -151,7 +148,6 @@ nav a:hover {
   left: 0;
 }
 
-/* hide responsive menu */
 #topnav_hamburger_icon,
 #topnav_responsive_menu {
   display: none;
@@ -162,10 +158,9 @@ nav a:hover {
 @media only screen and (max-width: 968px) {
 
 
-  /* Conteneur Flexbox en mode colonne */
   #conteneur {
     display: flex;
-    flex-direction: column;  /* Empiler les zones verticalement */
+    flex-direction: column;  
     justify-content: flex-start;
     align-items: stretch;
     padding: 10px;
@@ -174,31 +169,26 @@ nav a:hover {
     gap: 10px;
   }
 
-  /* Zones prennent 100% de la largeur en mode mobile */
   .zone1, .zone2, .zone3 {
-    width: 100%; /* Chaque zone prend 100% de la largeur */
-    margin-bottom: 10px; /* Espacement entre les zones */
-    flex-grow: 0;  /* Pas de croissance sur mobile */
-    height: auto;  /* Ajuster la hauteur si nécessaire */
+    width: 100%;  
+    margin-bottom: 10px; 
+    flex-grow: 0;  
+    height: auto;  
   }
 
-  /* Masquer le menu classique */
   #topnav_menu {
     display: none;
   }
 
-  /* Afficher le menu hamburger */
   #topnav_responsive_menu {
     display: block;
     z-index: 100;
   }
 
-  /* Empêcher le défilement horizontal */
   #root {
     position: relative;
   }
 
-  /* Position du menu hors de l'écran à gauche */
   #topnav_responsive_menu {
     display: block;
     position: absolute;
@@ -209,16 +199,15 @@ nav a:hover {
     height: 100%;
     z-index: 100;
     transform-origin: 0% 0%;
-    transform: translate(-100%, 0); /* Cache le menu hors écran à gauche */
+    transform: translate(-100%, 0); 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
-  /* Liste dans le menu */
   #topnav_responsive_menu ul {
     display: flex;
     z-index: 100;
     flex-direction: column;
-    justify-content: flex-start; /* Ajout clé ici */
+    justify-content: flex-start; 
     position: absolute;
     margin: 0;
     left: 0;
@@ -254,7 +243,6 @@ nav a:hover {
     cursor: url("selecteur.cur") 16 16, auto;
   }
 
-  /* Animation d'apparition depuis la gauche */
   #topnav_responsive_menu.open {
     transform: translateX(0);
     position: fixed;
@@ -265,7 +253,7 @@ nav a:hover {
   #topnav_hamburger_icon {
     display: block;
     position: absolute;
-    left: 10px;  /* Placer l'icône hamburger à gauche */
+    left: 10px;  
     margin: 16px;
     width: 33px;
     height: 28px;
@@ -325,9 +313,8 @@ nav a:hover {
     transform: rotate(-45deg);
   }
 
-  /* Centrer le lien HOME */
   #home_link {
-    flex-grow: 0.5;  /* Lien HOME occupe tout l'espace disponible */
+    flex-grow: 0.5;  
     text-align: center;
     z-index: 100;
     margin-left: 30%;
@@ -498,43 +485,41 @@ ul {
 }
 
 
-/*#############################################################QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ##################################################
-###########################################################################################"""######################################################""*/
+/*##########################################################################################################################################################################################################"""######################################################""*/
 .popup-content {
-  background: rgb(255, 119, 119); /* Couleur de fond rose */
+  background: rgb(255, 119, 119); 
   padding: 20px 30px;
-  border-radius: 50% 50% 30% 70% / 57% 42% 58% 43% ; /* Bords arrondis pour un effet nuage */
+  border-radius: 50% 50% 30% 70% / 57% 42% 58% 43% ; 
   position: relative;
   text-align: center;
   min-width: 300px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de flottement */
-  z-index: 10; /* Assurer que le pop-up soit devant */
-  overflow: visible; /* Permet aux pseudo-éléments de dépasser */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
+  z-index: 10; 
+  overflow: visible; 
 }
 
 .popup-content:before,
 .popup-content:after {
   content: '';
   position: absolute;
-  background: rgb(255, 119, 119); /* Couleur de fond rose */
+  background: rgb(255, 119, 119); 
   border-radius: 50%;
-  width: 30px; /* Taille plus petite pour les bords du nuage */
+  width: 30px; 
   height: 30px;
-  z-index: -1; /* Ces éléments doivent être derrière le contenu principal */
+  z-index: -1; 
 }
 
 .popup-content:before {
-  top: -20px; /* Positionner plus haut pour ne pas couper */
-  left: 20px; /* Ajuster selon besoin */
+  top: -20px; 
+  left: 20px; 
 }
 
 .popup-content:after {
-  bottom: -20px; /* Positionner plus bas pour ne pas couper */
-  right: 20px; /* Ajuster selon besoin */
+  bottom: -20px; 
+  right: 20px;
 } 
 
-/*#############################################QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ#######
-QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ##################################################################################################################""*/
+/*###############################################################################################################################################################""*/
 
 
 .close-btn {
@@ -546,7 +531,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 .blur {
   filter: blur(5px);
-  pointer-events: none; /* Pour éviter d’interagir avec le contenu flouté */
+  pointer-events: none; 
   user-select: none;
 }
 /*########################################################################################################################################################################"""
@@ -557,7 +542,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   align-items: flex-start;
   padding: 20px;
   /*max-width: 500px;*/
-  margin-left: 0; /* aligne à gauche */
+  margin-left: 0; 
   
   
   
@@ -613,7 +598,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   font-weight: 300;
   font-style: normal;
   font-size: 18px;
-  white-space: pre-line; /* important si tu veux que tes sauts de ligne dans le HTML soient respectés */
+  white-space: pre-line; 
 }
 
 .lesprojets {
@@ -621,7 +606,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   padding-left: 90px;
   text-align: left;
   
-  white-space: pre-line; /* important si tu veux que tes sauts de ligne dans le HTML soient respectés */
+  white-space: pre-line; 
 }
 
 .ecole {
@@ -635,8 +620,6 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   font-weight: 300;
   font-style: normal;
   font-size: 20px;
-  
-  /* important si tu veux que tes sauts de ligne dans le HTML soient respectés */
 }
 
 .domaines{
@@ -663,7 +646,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   font-style: normal;
   font-size: 18px;
   justify-content: left;
-  text-align: left;  /* Ajoutez cette ligne */
+  text-align: left;  
   text-indent: 5%;
 }
 .nom_ecole{
@@ -673,7 +656,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   font-style: bold;
   font-size: 20px;
   justify-content: left;
-  text-align: left;  /* Ajoutez cette ligne */
+  text-align: left; 
 }
 
 .textezone1{
@@ -687,7 +670,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 .formation_logo_iut:hover{
   cursor: url("selecteur.cur") 16 16, auto;
-  transform: scale(2.05); /* agrandit le bouton de 5% */
+  transform: scale(2.05); 
   
 }
 
@@ -722,7 +705,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   rect {
     fill: none;
     stroke: #000000;
-    stroke-width: 1; /* Bordure moins épaisse */
+    stroke-width: 1;
     stroke-dasharray: 422, 0;
     transition: all 0.35s linear;
     height: 50%; 
@@ -744,13 +727,11 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 
 
-
-/* Ajoute à ton CSS global */
 .hover01 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* pour que les figures s’empilent verticalement */
+  flex-direction: column; 
   width: 100%;
 }
 
@@ -761,7 +742,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   padding: 0;
   overflow: hidden;
   border-radius: 25px;
-  transform: translateY(65rem); /* descend visuellement */
+  transform: translateY(65rem); 
   box-shadow: 10px -10px 15px -3px rgba(0, 0, 0, 0.218), 4px -4px 6px -2px rgba(0, 0, 0, 0.05);
 
   
@@ -773,7 +754,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   border-radius: 25px;
   display: block;
   position: relative;
-  transform: translateY(55rem); /* descend aussi */
+  transform: translateY(55rem);
   transition: transform 0.3s ease-in-out;
 }
 .overlay {
@@ -783,7 +764,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(200, 200, 200, 0.1));
-  mix-blend-mode: luminosity; /* ou try 'multiply' */
+  mix-blend-mode: luminosity; 
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
@@ -827,8 +808,8 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 
 .figure2 {
   position: relative;
-  width: 10rem; /* ou n'importe quelle taille fixe */
-  aspect-ratio: 1 / 1; /* carré */
+  width: 10rem; 
+  aspect-ratio: 1 / 1; 
   margin: 0 auto;
   padding: 0;
   background: #a50f0f;
@@ -842,7 +823,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 
 
 .photo_furet {
-  object-fit: cover; /* couvre bien le conteneur */
+  object-fit: cover; 
   width: 100%;
   height: 100%;
   border-radius: 25px;
@@ -947,7 +928,6 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 
 
-/*podium*/
 .podium {
   display: flex;
   align-items: flex-end;
@@ -978,10 +958,9 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* Image carrée */
 .photo_artiste {
   width: 100%;
-  height: 100px; /* Carré */
+  height: 100px; 
   border-radius: 25px ;
   object-fit: cover;
   transition: filter 0.3s ease, transform 0.3s ease;
@@ -993,7 +972,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   width: 100%;
   text-align: center;
   z-index: 1;
-  display: flex; /* nécessaire */
+  display: flex; 
   justify-content: center;
   align-items: center;
 }
@@ -1032,17 +1011,14 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     -4px -4px 8px rgba(0, 0, 0, 0.9);
 }
 
-/* Afficher le nom de l'artiste au survol */
 .step:hover .nom_artiste {
   opacity: 1;
 }
 
-/* Effet de survol : assombrir les autres */
 .podium:hover .step {
   filter: brightness(0.5);
 }
 
-/* Élément survolé : agrandissement + lumière + ombre */
 .podium .step:hover {
   transform: scale(1.1);
   filter: brightness(1.1);
@@ -1123,15 +1099,15 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 
 .previous-button, .next-button {
   position: absolute;
-  bottom: 10px; /* Position les boutons en bas */
-  background-color: transparent; /* Supprime le fond */
-  color: black; /* Couleur des flèches */
-  font-size: 40px; /* Taille des flèches */
-  border: none; /* Supprime le contour */
+  bottom: 10px; 
+  background-color: transparent; 
+  color: black; 
+  font-size: 40px;
+  border: none; 
   padding: 0;
   cursor: url("selecteur.cur") 16 16, auto;
   z-index: 3;
-  width: 50px; /* Taille fixe pour les boutons */
+  width: 50px; 
   height: 50px;
   display: flex;
   justify-content: center;
@@ -1139,13 +1115,13 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 
 .previous-button {
-  left: 50%; /* Centre horizontalement */
-  transform: translateX(-60px); /* Décale légèrement à gauche */
+  left: 50%; 
+  transform: translateX(-60px); 
 }
 
 .next-button {
-  left: 50%; /* Centre horizontalement */
-  transform: translateX(10px); /* Décale légèrement à droite */
+  left: 50%; 
+  transform: translateX(10px); 
 }
 
 
@@ -1169,14 +1145,14 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 
 .center-frame42 {
-	backdrop-filter: blur(8px); /* Effet de flou sur l'arrière-plan */
+	backdrop-filter: blur(8px); 
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.5); 
   border: 1px solid #7c7c7c; 
   padding: 2rem;
   border-radius: 25px;
-  width: 60% ; /* Taille du cadre */
-  max-width: 600px; /* Limite la taille du cadre */
+  width: 60% ; 
+  max-width: 600px; 
   color: white;
   text-align: left;
   height: auto;
@@ -1195,8 +1171,8 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   font-weight:300;
   font-style: normal ;
   font-size: 16.5px;
-  top: 30px; /* Décale le texte vers le haut */
-  left: 150px; /* Décale le texte vers la droite */
+  top: 30px; 
+  left: 150px; 
 
 }
 .texte_presentation_suite{
@@ -1206,7 +1182,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   font-weight:300;
   font-style: normal ;
   bottom : 2px;
-  right: 15px; /* Décale le texte vers la droite */
+  right: 15px; 
   font-size:12px;
 }
 
@@ -1291,7 +1267,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   border-radius: 35px;
   height: 250px;
   width: 250px;
-  transform: translateY(10rem) !important; /* descend visuellement */
+  transform: translateY(10rem) !important; 
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
   cursor: url("selecteur.cur") 16 16, auto;
 
@@ -1306,20 +1282,16 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   gap: 10px;
   
 }
-  /* --- Reset & base layout ------------------------------------------- */
-  
-  /* --- Wrapper : délimite la zone de déplacement --------------------- */
   .wrapper{
     position:relative;
-    width:320px;   /* largeur ajustable */
-    height:240px;  /* hauteur ajustable */
+    width:320px;   
+    height:240px;  
     border:2px dashed #ccc;
-    overflow:hidden; /* empêche la souris de sortir */
+    overflow:hidden; 
     border-radius:1rem;
     background:#ffffff;
   }
 
-  /* --- Mouse ---------------------------------------------------------- */
   .espaced{
     margin-right: 40px;
   }
@@ -1337,7 +1309,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     animation:moveDiag 6s linear infinite alternate;
   }
 
-  /* Scroll wheel */
+ 
   .mouse::before{
     content:"";
     position:absolute;
@@ -1351,7 +1323,6 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     box-shadow:inset 0 1px 2px rgba(255,255,255,.3),inset 0 -1px 2px rgba(0,0,0,.4);
   }
 
-  /* Separation line (left & right button) */
   .mouse::after{
     content:"";
     position:absolute;
@@ -1378,7 +1349,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     margin: 40px auto;
     overflow: hidden;
     border-radius: 12px;
-    border: 3px solid #ff0000; /* vert un peu doux */
+    border: 3px solid #ff0000; 
     transform: translateY(-6rem);
    
     backdrop-filter: blur(10px);
@@ -1394,7 +1365,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     font-size: 48px;
    
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px rgb(253, 12, 12, 0.434); /* contour bleu marine, fin */
+    -webkit-text-stroke: 1px rgb(253, 12, 12, 0.434); 
     text-shadow: 0 2px 4px rgba(253, 12, 12, 0.434);
     
     display: inline-block;
@@ -1450,7 +1421,6 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 
   
 
-  /* choix*/
    /* choix*****************************************************************************/
    .page_choix_container {
     overflow-x: auto;
@@ -1459,36 +1429,34 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     width: 54%;
     margin: 0 auto;
     padding: 0;
-    gap: 5%; /* Espace entre chaque carte */
+    gap: 5%; 
     padding-bottom: 5%;
     padding-top: 2%;
     
   }
 
-  
-/* Webkit (Chrome, Safari, Edge) */
-.page_choix_container::-webkit-scrollbar {
-  height: 12px; /* Épaisseur de la barre horizontale */
+  .page_choix_container::-webkit-scrollbar {
+  height: 12px; 
 }
 
 .page_choix_container::-webkit-scrollbar-track {
   border-radius: 10px;
-  margin-top: 8px; /* Décale la scrollbar vers le bas */
+  margin-top: 8px; 
 }
 
 .page_choix_container::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ff66b2, #ff00d0); /* Dégradé girly */
+  background: linear-gradient(45deg, #ff66b2, #ff00d0); 
   border-radius: 10px;
  
 }
 
 .page_choix_container::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #ff4da6, #b266ff); /* Un peu plus flashy au hover */
+  background: linear-gradient(45deg, #ff4da6, #b266ff); 
 }
   
   .page_choix_section {
     scroll-snap-align: start;
-    flex: 0 0 auto; /* Ne pas s'étirer */
+    flex: 0 0 auto; 
   }
   
   .page_choix_card {
@@ -1580,13 +1548,13 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     font-weight: 500;
   }
   .barre_texte {
-    display: inline-block;   /* pour être visible à l’intérieur du texte */
+    display: inline-block;   
     width: 2px;
-    height: 1em;            /* hauteur égale à la hauteur de la ligne de texte */
+    height: 1em;            
     background-color: black;
     animation: blink 1s step-start infinite;
-    vertical-align: bottom;  /* pour bien l’aligner avec le texte */
-    margin-left: 4px;        /* un petit espace après le texte */
+    vertical-align: bottom;  
+    margin-left: 4px;        
   }
   
   @keyframes blink {
@@ -1649,21 +1617,19 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     color: #ff0000;
 
   }
- /* 1. Icônes elles‑mêmes */
 .site_icone_aide {
   flex: 0 0 auto;        
   width: 80px;
   height: 80px;
   border-radius: 15px;
   object-fit: cover;
-  margin: 15px;          /* espace tout autour */
+  margin: 15px;          
   display: block;   
   margin-top: 80%; 
   margin-left: -30%;  
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.249);  /* saut de ligne si on n’est pas en flex */
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.249);  
 }
 
-/* 2. Conteneur par défaut : empilement vertical */
 .amenagement_icone_site {
   display: flex;
   flex-direction: column;
@@ -1680,13 +1646,11 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 
 
-/* 3. Media‑query : passe en ligne sur petit écran */
 @media (max-width: 968px) {
   .amenagement_icone_site {
-    flex-direction: row;    /* alignement horizontal */
-    flex-wrap: wrap;        /* retour à la ligne si trop d’icônes */
+    flex-direction: row;    
+    flex-wrap: wrap;        
     justify-content: center;
-    /* background-color: blue;  ← tu peux garder si besoin */
   }
   .site_icone_aide {
     margin-top: auto !important;
@@ -1708,4 +1672,3 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 
   }
 }
-
