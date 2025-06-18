@@ -1698,6 +1698,15 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   background-color: blue;
   align-items: flex-end
   }
- 
+  .page_choix_container {
+  height: 100%;
+    width: 64%;
+}
+  
+.page_choix_card {
+
+    box-shadow: none;
+
+  }
 }
 
