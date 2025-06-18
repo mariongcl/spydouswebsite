@@ -1188,6 +1188,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 }
 .texte_presentation{
   font-family: "Cormorant Garamond", serif;
+  position: absolute;
   font-optical-sizing: auto;
   font-weight:300;
   font-style: normal ;
