@@ -1691,7 +1691,13 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   .site_icone_aide {
     margin-top: auto !important;
   }
- 
+ .podium {
+    margin-left: 10px;
+    margin-right: 10px;
+     
+  background-color: red;/* Facultatif : pour passer les éléments les uns sous les autres */
+    align-items: center;     /* Centrage si on passe en colonne */
+  }
  
 }
 
