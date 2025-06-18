@@ -1696,7 +1696,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
     margin-right: 10px;
      
   background-color: red;/* Facultatif : pour passer les éléments les uns sous les autres */
-    align-items: center;     /* Centrage si on passe en colonne */
+  align-items: flex-end
   }
  
 }
