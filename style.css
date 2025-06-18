@@ -159,6 +159,232 @@ nav a:hover {
   
 }
 
+@media only screen and (max-width: 968px) {
+
+
+  /* Conteneur Flexbox en mode colonne */
+  #conteneur {
+    display: flex;
+    flex-direction: column;  /* Empiler les zones verticalement */
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 10px;
+    margin: 15px;
+    background-color: rgb(255, 255, 255);
+    gap: 10px;
+  }
+
+  /* Zones prennent 100% de la largeur en mode mobile */
+  .zone1, .zone2, .zone3 {
+    width: 100%; /* Chaque zone prend 100% de la largeur */
+    margin-bottom: 10px; /* Espacement entre les zones */
+    flex-grow: 0;  /* Pas de croissance sur mobile */
+    height: auto;  /* Ajuster la hauteur si nécessaire */
+  }
+
+  /* Masquer le menu classique */
+  #topnav_menu {
+    display: none;
+  }
+
+  /* Afficher le menu hamburger */
+  #topnav_responsive_menu {
+    display: block;
+    z-index: 100;
+  }
+
+  /* Empêcher le défilement horizontal */
+  #root {
+    position: relative;
+  }
+
+  /* Position du menu hors de l'écran à gauche */
+  #topnav_responsive_menu {
+    display: block;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0); /* Cache le menu hors écran à gauche */
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  /* Liste dans le menu */
+  #topnav_responsive_menu ul {
+    display: flex;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: flex-start; /* Ajout clé ici */
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    min-width: 35%;
+    height: 100%;
+    padding: 10rem 0 0;
+    text-align: center;
+    background: #000000;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+
+  #topnav_responsive_menu li {
+    padding: 12px 24px;
+    z-index: 99;
+  }
+
+  #topnav_responsive_menu a {
+    white-space: nowrap;
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 99;
+  }
+
+  #topnav_responsive_menu a:hover {
+    text-decoration: underline;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    position: relative;
+    z-index: 99; 
+    cursor: url("selecteur.cur") 16 16, auto;
+  }
+
+  /* Animation d'apparition depuis la gauche */
+  #topnav_responsive_menu.open {
+    transform: translateX(0);
+    position: fixed;
+    z-index: 99;
+  }
+
+  /* ******************** HAMBURGER ICON ******************** */
+  #topnav_hamburger_icon {
+    display: block;
+    position: absolute;
+    left: 10px;  /* Placer l'icône hamburger à gauche */
+    margin: 16px;
+    width: 33px;
+    height: 28px;
+    z-index: 100;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: url("selecteur.cur") 16 16, auto;
+    z-index: 100;
+  }
+
+  #topnav_hamburger_icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    margin-bottom: 5px;
+    background: #ffffff;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0px;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    z-index: 100;
+  }
+
+  #topnav_hamburger_icon span:nth-child(1) {
+    top: 0px;
+    transform-origin: left top;
+  }
+
+  #topnav_hamburger_icon span:nth-child(2) {
+    top: 12px;
+    transform-origin: left center;
+  }
+
+  #topnav_hamburger_icon span:nth-child(3) {
+    top: 24px;
+    transform-origin: left bottom;
+  }
+
+  #topnav_hamburger_icon.open span {
+    background: #ffffff;
+  }
+
+  #topnav_hamburger_icon.open span:nth-child(1) {
+    width: 110%;
+    transform: rotate(45deg);
+  }
+
+  #topnav_hamburger_icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  #topnav_hamburger_icon.open span:nth-child(3) {
+    width: 110%;
+    transform: rotate(-45deg);
+  }
+
+  /* Centrer le lien HOME */
+  #home_link {
+    flex-grow: 0.5;  /* Lien HOME occupe tout l'espace disponible */
+    text-align: center;
+    z-index: 100;
+    margin-left: 30%;
+  }
+
+
+  header {
+    height: 120px;
+    background: #ffffff;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+  }
+  .image_dessus_zone1{
+    position: relative;
+    width: 700%; 
+    height: 8rem;
+  }
+
+
+  
+
+
+  
+  
+  figure, figure2{
+    
+    transform: none !important;
+  }
+  
+  
+
+  .card-container {
+    margin: 0 auto !important;
+  }
+
+
+
+
+
+  .scroll-container {   
+    transform:translateX(0%) !important;
+  }
+  }
+  #map {
+  
+    transform: none !important; 
+  }
+
+  .recherchealt{
+    transform:none !important;
+  
+  }
+
+  .center-frame42 {
+    height: 100%;
+    width: 90% !important;
+  }
 
 
   /***fin du media screen   *************************************************************************************/
@@ -922,10 +1148,12 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   transform: translateX(10px); /* Décale légèrement à droite */
 }
 
+
 /*INDEX***********************************************************************************************************************************/
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container25 {
@@ -947,7 +1175,8 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   border: 1px solid #7c7c7c; 
   padding: 2rem;
   border-radius: 25px;
-  width:  30%!important ; /* Taille du cadre */
+  width: 60% ; /* Taille du cadre */
+  max-width: 600px; /* Limite la taille du cadre */
   color: white;
   text-align: left;
   height: auto;
@@ -960,8 +1189,8 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   height: 120px;
 }
 .texte_presentation{
-  font-family: "Cormorant Garamond", serif;
   position: absolute;
+  font-family: "Cormorant Garamond", serif;
   font-optical-sizing: auto;
   font-weight:300;
   font-style: normal ;
@@ -1453,235 +1682,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
 
 /* 3. Media‑query : passe en ligne sur petit écran */
 @media (max-width: 968px) {
-
- 
-
-
-  /* Conteneur Flexbox en mode colonne */
-  #conteneur {
-    display: flex;
-    flex-direction: column;  /* Empiler les zones verticalement */
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 10px;
-    margin: 15px;
-    background-color: rgb(255, 255, 255);
-    gap: 10px;
-  }
-
-  /* Zones prennent 100% de la largeur en mode mobile */
-  .zone1, .zone2, .zone3 {
-    width: 100%; /* Chaque zone prend 100% de la largeur */
-    margin-bottom: 10px; /* Espacement entre les zones */
-    flex-grow: 0;  /* Pas de croissance sur mobile */
-    height: auto;  /* Ajuster la hauteur si nécessaire */
-  }
-
-  /* Masquer le menu classique */
-  #topnav_menu {
-    display: none;
-  }
-
-  /* Afficher le menu hamburger */
-  #topnav_responsive_menu {
-    display: block;
-    z-index: 100;
-  }
-
-  /* Empêcher le défilement horizontal */
-  #root {
-    position: relative;
-  }
-
-  /* Position du menu hors de l'écran à gauche */
-  #topnav_responsive_menu {
-    display: block;
-    position: absolute;
-    margin: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0); /* Cache le menu hors écran à gauche */
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
-
-  /* Liste dans le menu */
-  #topnav_responsive_menu ul {
-    display: flex;
-    z-index: 100;
-    flex-direction: column;
-    justify-content: flex-start; /* Ajout clé ici */
-    position: absolute;
-    margin: 0;
-    left: 0;
-    top: 0;
-    min-width: 35%;
-    height: 100%;
-    padding: 10rem 0 0;
-    text-align: center;
-    background: #000000;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-
-  #topnav_responsive_menu li {
-    padding: 12px 24px;
-    z-index: 99;
-  }
-
-  #topnav_responsive_menu a {
-    white-space: nowrap;
-    color: #ffffff;
-    text-decoration: none;
-    z-index: 99;
-  }
-
-  #topnav_responsive_menu a:hover {
-    text-decoration: underline;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    position: relative;
-    z-index: 99; 
-    cursor: url("selecteur.cur") 16 16, auto;
-  }
-
-  /* Animation d'apparition depuis la gauche */
-  #topnav_responsive_menu.open {
-    transform: translateX(0);
-    position: fixed;
-    z-index: 99;
-  }
-
-  /* ******************** HAMBURGER ICON ******************** */
-  #topnav_hamburger_icon {
-    display: block;
-    position: absolute;
-    left: 10px;  /* Placer l'icône hamburger à gauche */
-    margin: 16px;
-    width: 33px;
-    height: 28px;
-    z-index: 100;
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: url("selecteur.cur") 16 16, auto;
-    z-index: 100;
-  }
-
-  #topnav_hamburger_icon span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    margin-bottom: 5px;
-    background: #ffffff;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0px;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
-    z-index: 100;
-  }
-
-  #topnav_hamburger_icon span:nth-child(1) {
-    top: 0px;
-    transform-origin: left top;
-  }
-
-  #topnav_hamburger_icon span:nth-child(2) {
-    top: 12px;
-    transform-origin: left center;
-  }
-
-  #topnav_hamburger_icon span:nth-child(3) {
-    top: 24px;
-    transform-origin: left bottom;
-  }
-
-  #topnav_hamburger_icon.open span {
-    background: #ffffff;
-  }
-
-  #topnav_hamburger_icon.open span:nth-child(1) {
-    width: 110%;
-    transform: rotate(45deg);
-  }
-
-  #topnav_hamburger_icon.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
-
-  #topnav_hamburger_icon.open span:nth-child(3) {
-    width: 110%;
-    transform: rotate(-45deg);
-  }
-
-  /* Centrer le lien HOME */
-  #home_link {
-    flex-grow: 0.5;  /* Lien HOME occupe tout l'espace disponible */
-    text-align: center;
-    z-index: 100;
-    margin-left: 30%;
-  }
-
-
-  header {
-    height: 120px;
-    background: #ffffff;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-  }
-  .image_dessus_zone1{
-    position: relative;
-    width: 700%; 
-    height: 8rem;
-  }
-
-
-  
-
-
-  
-  
-  figure, figure2{
-    
-    transform: none !important;
-  }
-  
-  
-
-  .card-container {
-    margin: 0 auto !important;
-  }
-
-
-
-
-
-  .scroll-container {   
-    transform:translateX(0%) !important;
-  }
-  
-  #map {
-  
-    transform: none !important; 
-  }
-
-  .recherchealt{
-    transform:none !important;
-  
-  }
-
-  .center-frame42 {
-    height: 150%; /* 60% de la hauteur de l'écran */
-     width: 90% !important  /* 85% de la largeur de l'écran */
-
-  }
-	  .amenagement_icone_site {
+  .amenagement_icone_site {
     flex-direction: row;    /* alignement horizontal */
     flex-wrap: wrap;        /* retour à la ligne si trop d’icônes */
     justify-content: center;
@@ -1690,14 +1691,7 @@ QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ######################################
   .site_icone_aide {
     margin-top: auto !important;
   }
- .texte_presentation{
-	    position: static!important;
- }
- .podium {
-    margin-left: 10px;
-    margin-right: 10px;
-     
-  background-color: red;/* Facultatif : pour passer les éléments les uns sous les autres */
-    align-items: center;     /* Centrage si on passe en colonne */
-  }
+ 
+ 
 }
+
